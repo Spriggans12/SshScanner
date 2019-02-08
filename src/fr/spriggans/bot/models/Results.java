@@ -1,4 +1,4 @@
-package fr.spriggans.models;
+package fr.spriggans.bot.models;
 
 import java.util.ArrayList;
 import java.util.List;

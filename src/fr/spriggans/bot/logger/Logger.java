@@ -1,4 +1,4 @@
-package fr.spriggans.run;
+package fr.spriggans.bot.logger;
 
 public class Logger {
 

@@ -1,4 +1,4 @@
-package fr.spriggans.sshbot.thread;
+package fr.spriggans.bot.ssh.scanner.thread;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,10 +10,10 @@ import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
 
-import fr.spriggans.models.Connection;
-import fr.spriggans.models.Results;
-import fr.spriggans.run.Constants;
-import fr.spriggans.run.Logger;
+import fr.spriggans.bot.Constants;
+import fr.spriggans.bot.logger.Logger;
+import fr.spriggans.bot.models.Connection;
+import fr.spriggans.bot.models.Results;
 
 public class SshConnectionAttemptRunable implements Runnable {
 
@@ -31,10 +31,10 @@ public class SshConnectionAttemptRunable implements Runnable {
 		Logger.log("Attempting connection to : " + connection + " ...");
 		boolean success = attemptConnection();
 		if (success) {
+			Logger.separationLine();
 			Logger.log(connection + " DID SUCCEED !!!");
+			Logger.separationLine();
 			results.add(connection);
-		} else {
-			Logger.log(connection + " did not work.");
 		}
 	}
 

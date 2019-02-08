@@ -1,22 +1,32 @@
-package fr.spriggans.shodan;
+package fr.spriggans.bot.shodan;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.fooock.shodan.ShodanRestApi;
 import com.fooock.shodan.model.host.HostReport;
 
-import fr.spriggans.run.Constants;
-import fr.spriggans.run.Logger;
+import fr.spriggans.bot.Constants;
+import fr.spriggans.bot.logger.Logger;
 import io.reactivex.observers.DisposableObserver;
 
 public class ShodanParser {
+	
+	
+	static boolean DEBUG = false;
 	
 	private ShodanParser() {
 		// Empty
 	}
 	
 	public static List<String> getIps() {
+		
+		if(DEBUG) {
+			return Arrays.asList(new String[] {"79.246.119.5"});
+		}
+		
+		
 		ShodanRestApi api = new ShodanRestApi(Constants.SHODAN_API_KEY);
 		List<String> ipList = new ArrayList<>();
 		

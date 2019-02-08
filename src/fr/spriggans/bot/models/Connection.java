@@ -1,4 +1,4 @@
-package fr.spriggans.models;
+package fr.spriggans.bot.models;
 
 public class Connection {
 

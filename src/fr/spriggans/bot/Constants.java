@@ -1,4 +1,4 @@
-package fr.spriggans.run;
+package fr.spriggans.bot;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package fr.spriggans.sshbot;
+package fr.spriggans.bot.ssh.scanner;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,11 +7,11 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.FutureTask;
 import java.util.concurrent.TimeUnit;
 
-import fr.spriggans.models.Connection;
-import fr.spriggans.models.Results;
-import fr.spriggans.run.Constants;
-import fr.spriggans.run.Logger;
-import fr.spriggans.sshbot.thread.SshConnectionAttemptRunable;
+import fr.spriggans.bot.Constants;
+import fr.spriggans.bot.logger.Logger;
+import fr.spriggans.bot.models.Connection;
+import fr.spriggans.bot.models.Results;
+import fr.spriggans.bot.ssh.scanner.thread.SshConnectionAttemptRunable;
 
 public class SshTester {
 
