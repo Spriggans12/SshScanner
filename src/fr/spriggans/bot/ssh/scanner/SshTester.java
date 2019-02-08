@@ -58,7 +58,6 @@ public class SshTester {
 	private static void addConnectionToPool(Connection conn, Results results) {
 		SshConnectionAttemptRunable connectionAttempt = new SshConnectionAttemptRunable(conn, results);
 		FutureTask<?> task = new FutureTask<>(connectionAttempt, null);
-		Logger.log("Adding connection " + conn + " to the pool.");
 		THREAD_POOL.execute(task);
 	}
 }

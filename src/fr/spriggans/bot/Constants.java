@@ -18,7 +18,7 @@ public class Constants {
 	/**
 	 * Change that if needed.
 	 */
-	public static final String QUERY = "raspbian port:\"22\"";
+	public static final String QUERY = "raspbian port:\"22\" country:\"FR\"";
 
 	/**
 	 * Milliseconds.
